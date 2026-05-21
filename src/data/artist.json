@@ -1,0 +1,48 @@
+{
+  "name": "Artist Name",
+  "nameZh": "艺术家姓名",
+  "born": "1985, Shanghai",
+  "based": "Shanghai & Berlin",
+  "bioEn": "Working across painting, sculpture, installation, and digital media, the artist explores the intersection of materiality and perception. Their practice investigates how memory, space, and technology converge to shape contemporary experience. Major solo exhibitions include White Cube (London), Long Museum (Shanghai), and Gagosian (Hong Kong). Their work has been featured in the Shanghai Biennale, Art Basel Unlimited, and Centre Pompidou. They hold an MFA from the Royal College of Art and a BFA from the China Academy of Art.",
+  "bioZh": "艺术家在绘画、雕塑、装置和数字媒体领域持续探索物质性与感知的交汇。其创作实践研究记忆、空间与技术如何共同塑造当代经验。主要个展包括白立方（伦敦）、龙美术馆（上海）和高古轩（香港）。作品曾参加上海双年展、巴塞尔艺术展无限展厅及蓬皮杜艺术中心。拥有皇家艺术学院硕士及中国美术学院学士学位。",
+  "statementEn": "My work is an ongoing inquiry into the thresholds between the visible and the invisible, the tangible and the ephemeral. I am interested in how materials can hold time — how a surface can record a gesture, how light can define emptiness, how code can embody nature. Each piece is a conversation between intention and accident, between the hand and the machine. I seek to create spaces of contemplation where the viewer might pause, look again, and discover something that was always there but never seen.",
+  "statementZh": "我的作品是对可见与不可见、有形与短暂之间阈限的持续追问。我关注材料如何承载时间——表面如何记录手势，光线如何定义空无，代码如何具象化自然。每件作品都是意图与偶然、手与机器之间的对话。我希望创造沉思的空间，让观者停下、再看一眼，发现那些始终存在却从未被看见的东西。",
+  "education": [
+    { "year": "2012–2014", "description": "MFA, Royal College of Art, London" },
+    { "year": "2004–2008", "description": "BFA, China Academy of Art, Hangzhou" }
+  ],
+  "awards": [
+    { "year": "2023", "description": "Artist of the Year, ARTnews China" },
+    { "year": "2021", "description": "Prix Marcel Duchamp, Nominee" },
+    { "year": "2019", "description": "HUGO BOSS ASIA ART, Finalist" }
+  ],
+  "collections": [
+    "Centre Pompidou, Paris",
+    "M+, Hong Kong",
+    "Long Museum, Shanghai",
+    "UCCA Center for Contemporary Art, Beijing",
+    "K11 Art Foundation, Hong Kong"
+  ],
+  "news": [
+    {
+      "title": "Solo exhibition at White Cube London opens in September",
+      "date": "2024-09-01",
+      "type": "exhibition"
+    },
+    {
+      "title": "New monumental sculpture installed at Shanghai Biennale",
+      "date": "2024-11-15",
+      "type": "exhibition"
+    },
+    {
+      "title": "Featured in Artforum's 'Best of 2024'",
+      "date": "2024-12-20",
+      "type": "press"
+    },
+    {
+      "title": "Digital Erosion series acquired by Centre Pompidou",
+      "date": "2024-06-10",
+      "type": "news"
+    }
+  ]
+}

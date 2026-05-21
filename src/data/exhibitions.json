@@ -1,0 +1,84 @@
+{
+  "solo": [
+    {
+      "title": "Echoes of Silence",
+      "venue": "White Cube, London",
+      "date": "2024",
+      "type": "solo"
+    },
+    {
+      "title": "Topologies",
+      "venue": "Long Museum, Shanghai",
+      "date": "2023",
+      "type": "solo"
+    },
+    {
+      "title": "Between the Lines",
+      "venue": "Gagosian, Hong Kong",
+      "date": "2022",
+      "type": "solo"
+    },
+    {
+      "title": "Resonance",
+      "venue": "Museum of Contemporary Art, Tokyo",
+      "date": "2021",
+      "type": "solo"
+    },
+    {
+      "title": "Fragments",
+      "venue": "Pace Gallery, New York",
+      "date": "2020",
+      "type": "solo"
+    }
+  ],
+  "group": [
+    {
+      "title": "Art Basel — Unlimited",
+      "venue": "Basel, Switzerland",
+      "date": "2024",
+      "type": "group"
+    },
+    {
+      "title": "Shanghai Biennale",
+      "venue": "Power Station of Art, Shanghai",
+      "date": "2024",
+      "type": "group"
+    },
+    {
+      "title": "The Future is Now",
+      "venue": "Centre Pompidou, Paris",
+      "date": "2023",
+      "type": "group"
+    },
+    {
+      "title": "Digital Horizons",
+      "venue": "MoMA PS1, New York",
+      "date": "2023",
+      "type": "group"
+    },
+    {
+      "title": "Beyond Boundaries",
+      "venue": "Serpentine Gallery, London",
+      "date": "2022",
+      "type": "group"
+    },
+    {
+      "title": "FIAC — Hors les Murs",
+      "venue": "Paris",
+      "date": "2022",
+      "type": "group"
+    },
+    {
+      "title": "Asia Now",
+      "venue": "Palais d'Édouard André, Paris",
+      "date": "2021",
+      "type": "group"
+    },
+    {
+      "title": "West Bund Art & Design",
+      "venue": "Shanghai",
+      "date": "2021",
+      "type": "group"
+    }
+  ]
+}

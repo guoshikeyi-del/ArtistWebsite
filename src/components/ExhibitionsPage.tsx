@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import { motion } from "framer-motion";
 import exhibitions from "@/data/exhibitions.json";
 import { useLanguage } from "@/context/LanguageContext";
@@ -16,7 +15,7 @@ interface Exhibition {
 
 function useYears(exhibits: Exhibition[]) {
   const years = Array.from(new Set(exhibits.map((e) => e.date)));
-  return years.sort((a, b) => b.localeCompare(a)); // desc: newest first
+  return years.sort((a, b) => b.localeCompare(a));
 }
 
 function TimelineSection({
@@ -31,22 +30,21 @@ function TimelineSection({
   const years = useYears(items);
 
   return (
-    <div className="mb-20 last:mb-0">
+    <div className="mb-16 last:mb-0 md:mb-20">
       {/* Section heading */}
-      <h2 className="mb-10 text-xs font-medium uppercase tracking-[0.25em] text-secondary">
+      <h2 className="mb-8 text-xs font-medium uppercase tracking-[0.25em] text-secondary md:mb-10">
         {title}
       </h2>
 
       <div className="grid grid-cols-1 gap-0 md:grid-cols-12">
         {/* ── Left: sticky year column ── */}
-        <div className="md:col-span-3">
-          <div className="sticky top-32 space-y-0">
+        <div className="hidden md:block md:col-span-3">
+          <div className="sticky top-28 space-y-0">
             {years.map((year) => (
               <div key={year} className="flex items-center gap-4 py-4 md:justify-end">
                 <span className="text-xs tabular-nums text-secondary/60 md:text-right">
                   {year}
                 </span>
-                <div className="h-px flex-1 bg-divider md:hidden" />
                 <div className="hidden md:block h-px w-4 bg-divider" />
               </div>
             ))}
@@ -58,17 +56,17 @@ function TimelineSection({
           {years.map((year) => {
             const yearItems = items.filter((e) => e.date === year);
             return (
-              <div key={year} className="flex md:block">
+              <div key={year}>
                 {/* Mobile: inline year label */}
-                <div className="shrink-0 md:hidden">
-                  <div className="flex items-center gap-3 py-4">
+                <div className="md:hidden">
+                  <div className="flex items-center gap-3 py-3">
                     <span className="text-xs tabular-nums text-secondary/60">{year}</span>
                     <div className="h-px flex-1 bg-divider" />
                   </div>
                 </div>
 
                 {/* Exhibition cards */}
-                <div className="flex-1 space-y-6 pb-8">
+                <div className="space-y-5 pb-6 md:pb-8">
                   {yearItems.map((ex) => (
                     <motion.div
                       key={`${ex.title}-${ex.date}`}
@@ -101,8 +99,8 @@ export default function ExhibitionsPage() {
   const isZh = lang === "zh";
 
   return (
-    <div className="min-h-screen bg-background pt-24">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-16">
+    <div className="min-h-screen bg-background">
+      <div className="mx-auto max-w-[1400px] px-10 pt-8 pb-12 md:px-14 md:pt-12 md:pb-16 lg:px-20 xl:px-24">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,7 +110,7 @@ export default function ExhibitionsPage() {
           {isZh ? "展览" : "Exhibitions"}
         </motion.h1>
 
-        <div className="mt-16">
+        <div className="mt-12 md:mt-16">
           <TimelineSection
             title={isZh ? "个人展览" : "Solo Exhibitions"}
             items={exhibitions.solo}

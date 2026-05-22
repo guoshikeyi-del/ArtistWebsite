@@ -39,8 +39,8 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-background pt-24">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-16">
+    <div className="min-h-screen bg-background">
+      <div className="mx-auto max-w-[1400px] px-10 pt-8 pb-12 md:px-14 md:pt-12 md:pb-16 lg:px-20 xl:px-24">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -50,7 +50,7 @@ export default function ContactPage() {
           {isZh ? "联系" : "Contact"}
         </motion.h1>
 
-        <div className="mt-16 grid grid-cols-1 gap-20 lg:grid-cols-12">
+        <div className="mt-12 grid grid-cols-1 gap-16 md:mt-16 lg:grid-cols-12 lg:gap-20">
           {/* Contact info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

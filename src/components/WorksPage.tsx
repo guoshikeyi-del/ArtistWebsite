@@ -34,9 +34,9 @@ export default function WorksPage() {
     activeIdx === 0 ? works : works.filter((w) => w.category === CATEGORIES_EN[activeIdx]);
 
   return (
-    <div className="min-h-screen bg-background pt-24">
+    <div className="min-h-screen bg-background">
       {/* Header */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-16">
+      <div className="mx-auto max-w-[1400px] px-10 pt-8 md:px-14 md:pt-12 lg:px-20 xl:px-24">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -51,7 +51,7 @@ export default function WorksPage() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.6 }}
-          className="mt-8 flex flex-wrap gap-6 border-b border-divider pb-6"
+          className="mt-8 flex flex-wrap gap-4 sm:gap-6 border-b border-divider pb-6"
         >
           {categories.map((cat, idx) => (
             <button
@@ -78,10 +78,10 @@ export default function WorksPage() {
       </div>
 
       {/* Grid */}
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-16">
+      <div className="mx-auto max-w-[1400px] px-10 py-12 md:px-14 md:py-16 lg:px-20 xl:px-24">
         <motion.div
           layout
-          className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 md:gap-x-8 md:gap-y-16"
         >
           <AnimatePresence mode="popLayout">
             {filtered.map((work, i) => (
@@ -105,7 +105,7 @@ export default function WorksPage() {
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute inset-0 bg-foreground/0 transition-colors duration-500 group-hover:bg-foreground/[0.04]" />
-                    {/* Shine sweep — same technique as SeriesCarousel */}
+                    {/* Shine sweep */}
                     <div className="shine-sweep absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </div>
                   <div className="mt-4 flex items-baseline justify-between">

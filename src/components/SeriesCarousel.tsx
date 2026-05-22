@@ -1,6 +1,5 @@
 "use client";
 
-import { useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import works from "@/data/works.json";
@@ -26,7 +25,7 @@ export default function SeriesCarousel() {
         return (
           <div key={cat} className="mb-8 last:mb-0">
             {/* Series title row */}
-            <div className="mx-auto max-w-7xl px-6 lg:px-16 flex items-center gap-4 mb-4">
+            <div className="px-10 md:px-14 lg:px-20 xl:px-24 flex items-center gap-4 mb-4">
               <span className="text-xs font-medium uppercase tracking-[0.25em] text-secondary">
                 {seriesName}
               </span>
@@ -35,7 +34,7 @@ export default function SeriesCarousel() {
 
             {/* Horizontal scroll track with snap */}
             <div className="overflow-x-auto snap-x snap-mandatory scroll-smooth series-track">
-              <div className="flex gap-3 pl-6 lg:pl-16 pr-6 lg:pr-16">
+              <div className="flex gap-3 px-10 md:px-14 lg:px-20 xl:px-24">
                 {catWorks.map((work) => (
                   <Link
                     href={`/works/${work.slug}`}
@@ -43,20 +42,20 @@ export default function SeriesCarousel() {
                     className="group shrink-0 block snap-start"
                   >
                     {/* Card with shine overlay */}
-                    <div className="relative w-40 h-40 overflow-hidden bg-divider">
+                    <div className="relative w-36 h-36 sm:w-40 sm:h-40 md:w-44 md:h-44 overflow-hidden bg-divider">
                       <Image
                         src={work.image}
                         alt={isZh ? work.titleZh : work.title}
                         fill
                         className="object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                        sizes="160px"
+                        sizes="(max-width: 640px) 144px, (max-width: 768px) 160px, 176px"
                       />
                       {/* Hover overlay */}
                       <div className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/[0.06] transition-colors duration-300" />
                       {/* Shine sweep effect */}
                       <div className="shine-sweep absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                     </div>
-                    <p className="mt-2 text-xs text-secondary/80 truncate max-w-[160px]">
+                    <p className="mt-2 text-xs text-secondary/80 truncate max-w-[144px] sm:max-w-[160px] md:max-w-[176px]">
                       {isZh ? work.titleZh : work.title}
                     </p>
                   </Link>

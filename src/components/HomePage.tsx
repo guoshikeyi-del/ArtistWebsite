@@ -34,7 +34,7 @@ export default function HomePage() {
   return (
     <div className="bg-background">
       {/* ───── Hero ───── */}
-      <section className="relative flex min-h-screen flex-col justify-end overflow-hidden px-6 pb-16 pt-32 lg:px-16 lg:pb-24">
+      <section className="relative flex min-h-screen flex-col justify-end overflow-hidden px-10 pb-16 md:px-14 lg:px-20 xl:px-24 lg:pb-24 -mt-24">
         {/* Name — monumental */}
         <motion.h1
           initial={{ opacity: 0, y: 60 }}
@@ -73,7 +73,7 @@ export default function HomePage() {
       <SeriesCarousel />
 
       {/* ───── Visual Grid — asymmetric, gallery-like ───── */}
-      <section className="mx-auto max-w-7xl px-6 pb-32 lg:px-16">
+      <section className="mx-auto max-w-[1400px] px-10 pb-32 md:px-14 lg:px-20 xl:px-24">
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -148,7 +148,7 @@ export default function HomePage() {
 
       {/* ───── Selected Works ───── */}
       <section className="border-t border-divider">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-16 lg:py-32">
+        <div className="mx-auto max-w-[1400px] px-10 py-24 md:px-14 lg:px-20 xl:px-24 lg:py-32">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -174,7 +174,7 @@ export default function HomePage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-80px" }}
-            className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+            className="grid grid-cols-1 gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 md:gap-x-8 md:gap-y-16"
           >
             {featured.map((work, i) => (
               <motion.div key={work.slug} variants={fadeUp} custom={i}>
@@ -206,8 +206,8 @@ export default function HomePage() {
 
       {/* ───── About the Artist ───── */}
       <section className="border-t border-divider">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-16 lg:py-32">
-          <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
+        <div className="mx-auto max-w-[1400px] px-10 py-24 md:px-14 lg:px-20 xl:px-24 lg:py-32">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -246,7 +246,7 @@ export default function HomePage() {
 
       {/* ───── News ───── */}
       <section className="border-t border-divider">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-16 lg:py-32">
+        <div className="mx-auto max-w-[1400px] px-10 py-24 md:px-14 lg:px-20 xl:px-24 lg:py-32">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -269,7 +269,7 @@ export default function HomePage() {
                 key={i}
                 variants={fadeUp}
                 custom={i}
-                className="group flex cursor-default items-start gap-8 py-6 transition-colors hover:bg-foreground/[0.02]"
+                className="group flex cursor-default flex-col gap-2 py-6 transition-colors hover:bg-foreground/[0.02] sm:flex-row sm:items-start sm:gap-8"
               >
                 <span className="shrink-0 pt-0.5 text-xs tabular-nums text-secondary">
                   {item.date}

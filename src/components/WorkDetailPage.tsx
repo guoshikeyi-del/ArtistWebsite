@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import works from "@/data/works.json";
-import { cn } from "@/lib/cn";
 import { useLanguage } from "@/context/LanguageContext";
 
 type Work = (typeof works)[number];
@@ -136,8 +135,8 @@ export default function WorkDetailPage({ slug }: { slug: string }) {
   }
 
   return (
-    <div className="min-h-screen bg-background pt-24">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-16">
+    <div className="min-h-screen bg-background">
+      <div className="mx-auto max-w-[1400px] px-10 pt-8 pb-12 md:px-14 md:pt-12 md:pb-16 lg:px-20 xl:px-24">
         {/* Breadcrumb */}
         <nav className="mb-12">
           <Link
@@ -148,7 +147,7 @@ export default function WorkDetailPage({ slug }: { slug: string }) {
           </Link>
         </nav>
 
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Image */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -192,7 +191,7 @@ export default function WorkDetailPage({ slug }: { slug: string }) {
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-secondary">{isZh ? "媒介" : "Medium"}</span>
-                <span className="text-foreground">{work.medium}</span>
+                <span className="text-foreground text-right max-w-[60%]">{work.medium}</span>
               </div>
               <div className="flex justify-between text-sm">
                 <span className="text-secondary">{isZh ? "尺寸" : "Dimensions"}</span>

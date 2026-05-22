@@ -2,7 +2,11 @@ import type { Metadata } from "next";
 import { Inter, Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { DynamicBackground } from "@/components/DynamicBackground";
+import { FloatingScrollbar } from "@/components/FloatingScrollbar";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { ThemeProvider } from "@/context/ThemeContext";
+import { DynamicBgProvider } from "@/context/DynamicBgContext";
 import "./globals.css";
 
 const inter = Inter({
@@ -60,9 +64,15 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col font-sans">
         <LanguageProvider>
-          <Navigation />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <ThemeProvider>
+            <DynamicBgProvider>
+              <DynamicBackground />
+              <FloatingScrollbar />
+              <Navigation />
+              <main className="flex-1 pt-24 relative z-[2]">{children}</main>
+              <Footer />
+            </DynamicBgProvider>
+          </ThemeProvider>
         </LanguageProvider>
       </body>
     </html>

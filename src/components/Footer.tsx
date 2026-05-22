@@ -97,7 +97,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-divider bg-background">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+      <div className="mx-auto max-w-[1400px] px-10 py-16 md:px-14 lg:px-20 xl:px-24">
         {/* Top row */}
         <motion.div
           variants={stagger}

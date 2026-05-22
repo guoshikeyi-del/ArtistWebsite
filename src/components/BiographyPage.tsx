@@ -25,7 +25,7 @@ export default function BiographyPage() {
   return (
     <div className="min-h-screen bg-background">
       {/* ───── Hero: Full-width image + artist name ───── */}
-      <div className="relative h-[60vh] min-h-[400px] overflow-hidden">
+      <div className="relative h-[50vh] min-h-[360px] md:h-[60vh] md:min-h-[400px] overflow-hidden -mt-24">
         <Image
           src="/images/data-paintings.jpg"
           alt={isZh ? artist.nameZh : artist.name}
@@ -34,14 +34,14 @@ export default function BiographyPage() {
           priority
         />
         {/* Gradient overlay bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+        <div className="absolute inset-0" style={{ background: `linear-gradient(to top, var(--color-background), color-mix(in srgb, var(--color-background) 20%, transparent), transparent)` }} />
         {/* Artist name */}
-        <div className="absolute bottom-0 left-0 right-0 px-6 pb-12 lg:px-16">
+        <div className="absolute bottom-0 left-0 right-0 px-10 pb-12 md:px-14 lg:px-20 xl:px-24">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.25, 0.1, 0.25, 1] }}
-            className="text-[clamp(2.5rem,8vw,7rem)] font-extralight leading-[0.9] tracking-[-0.02em] text-foreground"
+            className="text-[clamp(2rem,7vw,6rem)] font-extralight leading-[0.9] tracking-[-0.02em] text-foreground"
           >
             {isZh ? artist.nameZh : artist.name}
           </motion.h1>
@@ -57,8 +57,8 @@ export default function BiographyPage() {
       </div>
 
       {/* ───── Biography + Statement ───── */}
-      <div className="mx-auto max-w-7xl px-6 py-24 lg:px-16 lg:py-32">
-        <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-12">
+      <div className="mx-auto max-w-[1400px] px-10 py-20 md:px-14 md:py-24 lg:px-20 xl:px-24 lg:py-32">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
           {/* Left: section labels */}
           <div className="lg:col-span-3 space-y-16">
             <section>
@@ -92,7 +92,7 @@ export default function BiographyPage() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
-              className="border-l-2 border-divider pl-8"
+              className="border-l-2 border-divider pl-6 md:pl-8"
             >
               <p className="text-base leading-[1.85] italic text-foreground/70">
                 &ldquo;{isZh ? artist.statementZh : artist.statementEn}&rdquo;
@@ -102,9 +102,9 @@ export default function BiographyPage() {
         </div>
 
         {/* ───── CV Sections ───── */}
-        <div className="mt-32 space-y-24 border-t border-divider pt-24">
+        <div className="mt-24 space-y-20 border-t border-divider pt-20 md:mt-32 md:space-y-24 md:pt-24">
           {/* Education */}
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-3">
               <h2 className="text-xs font-medium uppercase tracking-[0.25em] text-secondary">
                 {isZh ? "教育背景" : "Education"}
@@ -120,7 +120,7 @@ export default function BiographyPage() {
                     whileInView="visible"
                     viewport={{ once: true, margin: "-30px" }}
                     custom={i}
-                    className="flex items-start gap-8 py-4"
+                    className="flex flex-col gap-1 py-4 sm:flex-row sm:items-start sm:gap-8"
                   >
                     <span className="shrink-0 text-xs tabular-nums text-secondary">{item.year}</span>
                     <span className="text-sm text-foreground">{item.description}</span>
@@ -131,7 +131,7 @@ export default function BiographyPage() {
           </div>
 
           {/* Awards */}
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-3">
               <h2 className="text-xs font-medium uppercase tracking-[0.25em] text-secondary">
                 {isZh ? "获奖" : "Awards"}
@@ -147,7 +147,7 @@ export default function BiographyPage() {
                     whileInView="visible"
                     viewport={{ once: true, margin: "-30px" }}
                     custom={i}
-                    className="flex items-start gap-8 py-4"
+                    className="flex flex-col gap-1 py-4 sm:flex-row sm:items-start sm:gap-8"
                   >
                     <span className="shrink-0 text-xs tabular-nums text-secondary">{item.year}</span>
                     <span className="text-sm text-foreground">{item.description}</span>
@@ -158,7 +158,7 @@ export default function BiographyPage() {
           </div>
 
           {/* Collections */}
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-3">
               <h2 className="text-xs font-medium uppercase tracking-[0.25em] text-secondary">
                 {isZh ? "公共收藏" : "Public Collections"}

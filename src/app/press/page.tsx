@@ -60,7 +60,7 @@ const PRESS_ITEMS = {
       publication: "Frieze",
       title: "互联网之后的绘画：一份新宣言",
       date: "2025年1月",
-        excerpt:
+      excerpt:
         "与挑战\u201C绘画已死\u201D这一假设的新兴声音对话。",
     },
     {
@@ -109,8 +109,8 @@ export default function PressPage() {
   const items = isZh ? PRESS_ITEMS.zh : PRESS_ITEMS.en;
 
   return (
-    <div className="min-h-screen bg-background pt-24">
-      <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
+    <div className="min-h-screen bg-background">
+      <div className="mx-auto max-w-[1400px] px-10 pt-8 pb-12 md:px-14 md:pt-12 md:pb-16 lg:px-20 xl:px-24">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -120,7 +120,7 @@ export default function PressPage() {
           <h1 className="text-xs font-medium uppercase tracking-[0.25em] text-secondary">
             {isZh ? "文献" : "Press"}
           </h1>
-          <p className="mt-4 text-3xl font-medium tracking-tight lg:text-4xl">
+          <p className="mt-4 text-2xl font-medium tracking-tight md:text-3xl lg:text-4xl">
             {isZh ? "媒体报道与评论" : "Media & Criticism"}
           </p>
         </motion.div>
@@ -134,7 +134,7 @@ export default function PressPage() {
         />
 
         {/* Press list */}
-        <div className="mt-12 flex flex-col gap-12">
+        <div className="mt-12 flex flex-col gap-12 max-w-3xl">
           {items.map((item, i) => (
             <motion.article
               key={item.id}
